@@ -146,7 +146,7 @@ resource "google_compute_region_backend_service" "producer_service_backend" {
 
 resource "google_compute_network" "psc_ilb_network" {
   name                    = "psc-ilb-network"
-  auto_create_subnetworks = false
+  auto_create_subnetworks = true
   project                 = module.producer_project.project_id
 }
 
