@@ -71,7 +71,7 @@ resource "azurerm_public_ip" "public_ip" {
   resource_group_name = azurerm_resource_group.resource_group[0].name
   location            = azurerm_resource_group.resource_group[0].location
   allocation_method   = "Static"
-  sku                 = "Basic"
+  sku                 = "Standard"
 }
 
 resource "azurerm_network_interface" "nic" {
