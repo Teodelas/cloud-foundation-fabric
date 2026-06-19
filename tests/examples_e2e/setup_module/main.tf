@@ -62,7 +62,7 @@ resource "google_storage_bucket" "bucket" {
 resource "google_compute_network" "network" {
   name                    = "e2e-test"
   project                 = google_project.project.project_id
-  auto_create_subnetworks = false
+  auto_create_subnetworks = true
   depends_on              = [google_project_service.project_service]
 }
 
