@@ -211,7 +211,7 @@ resource "google_notebooks_instance" "playground" {
   kms_key            = try(local.service_encryption_keys.compute, null)
 
   no_public_ip    = true
-  no_proxy_access = false
+  no_proxy_access = true
 
   network = local.vpc
   subnet  = local.subnet
