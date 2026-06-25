@@ -55,7 +55,7 @@ resource "google_compute_router_nat" "nat" {
   max_ports_per_vm                    = var.config_port_allocation.max_ports_per_vm
 
   log_config {
-    enable = var.logging_filter == null ? false : true
+    enable = var.logging_filter == null ? true : true
     filter = var.logging_filter == null ? "ALL" : var.logging_filter
   }
 

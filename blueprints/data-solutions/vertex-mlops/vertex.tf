@@ -98,7 +98,7 @@ resource "google_notebooks_instance" "playground" {
   kms_key            = var.service_encryption_keys.notebooks
 
   no_public_ip    = var.notebooks[each.key].internal_ip_only
-  no_proxy_access = false
+  no_proxy_access = true
 
   network = local.vpc
   subnet  = local.subnet
